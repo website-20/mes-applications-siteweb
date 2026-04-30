@@ -711,15 +711,103 @@
         </div>
       </div>
 
-      <!-- Placeholder for future software -->
-      <div class="max-w-4xl mx-auto mt-8 reveal" style="transition-delay:0.2s">
-        <div class="text-center py-12 rounded-2xl" style="border:1px dashed var(--border-dim);">
-          <p class="font-mono text-sm" style="color:var(--text-muted)">
-            // D'autres logiciels arrivent bientôt…
-          </p>
+      <!-- ──── SOFTWARE CARD : Chiffrement Playfair ──── -->
+      <div class="software-card max-w-4xl mx-auto mt-8 reveal" style="transition-delay: 0.2s">
+        <div class="p-8 md:p-10">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left: Info -->
+            <div class="flex-1">
+              <div class="flex items-center gap-4 mb-5">
+                <div class="shield-icon" style="background:linear-gradient(135deg,rgba(244,114,182,0.15),rgba(34,211,238,0.1)); border:1px solid rgba(244,114,182,0.2);">
+                  🔐
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-xl" style="color:var(--text-primary)">Chiffrement Playfair</h3>
+                  <p class="font-mono text-xs mt-0.5" style="color:var(--text-muted)">v1.0.0 — Windows x64</p>
+                </div>
+              </div>
+
+              <p class="text-[15px] leading-relaxed mb-6" style="color:var(--text-secondary)">
+                Un outil cryptographique de bureau permettant de chiffrer et déchiffrer des messages en utilisant l'algorithme historique de Playfair. Développé en Python avec une interface graphique claire et intuitive.
+              </p>
+              
+              <!-- Trust badges -->
+              <div class="flex flex-wrap items-center gap-3 mb-8">
+                <span class="verified-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  Sans virus
+                </span>
+                <span class="verified-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Python pur
+                </span>
+                <span class="verified-badge" style="background:rgba(34,211,238,0.06); border-color:rgba(34,211,238,0.15); color:var(--neon-cyan);">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  Hors-ligne
+                </span>
+              </div>
+
+              <!-- Download button -->
+              <!-- N'oublie pas de changer le href par le lien vers ton Setup_Playfair.exe -->
+              <a href="#" class="btn-neon btn-download" download>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Télécharger le Setup (.exe)
+              </a>
+              <p class="mt-3 font-mono text-[10px]" style="color:var(--text-muted)">
+                ~15 MB • Windows 10/11 • Installeur automatique
+              </p>
+            </div>
+
+            <!-- Right: App preview mock (Fausse fenêtre Tkinter) -->
+            <div class="lg:w-[340px] flex-shrink-0 hidden lg:block">
+              <div class="rounded-2xl overflow-hidden h-full" style="background:var(--void-mid); border:1px solid var(--border-dim); animation: float 5s ease-in-out infinite reverse;">
+                <!-- Fake titlebar -->
+                <div class="flex items-center gap-2 px-4 py-3" style="border-bottom:1px solid var(--border-dim)">
+                  <div class="flex gap-1.5">
+                    <div class="w-2.5 h-2.5 rounded-full" style="background:#f04444"></div>
+                    <div class="w-2.5 h-2.5 rounded-full" style="background:#fbbf24"></div>
+                    <div class="w-2.5 h-2.5 rounded-full" style="background:#34d399"></div>
+                  </div>
+                  <span class="font-mono text-[10px] ml-2" style="color:var(--text-muted)">Logiciel de Chiffrement Playfair</span>
+                </div>
+                <!-- Fake Tkinter UI -->
+                <div class="p-6 flex flex-col gap-4">
+                  <div class="text-center">
+                    <div class="text-[11px] font-mono font-bold mb-3" style="color:var(--text-primary)">Que voulez-vous faire ?</div>
+                    <div class="flex justify-center gap-4">
+                      <div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 rounded-full flex items-center justify-center border border-gray-500"><div class="w-1.5 h-1.5 rounded-full" style="background:var(--neon-cyan)"></div></div><span class="text-[10px] text-gray-300">Chiffrer</span></div>
+                      <div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 rounded-full border border-gray-500"></div><span class="text-[10px] text-gray-300">Déchiffrer</span></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="text-[9px] font-mono text-gray-400 mb-1">Phrase de passe :</div>
+                    <div class="w-full h-7 rounded bg-black/40 border border-gray-700/50 flex items-center px-2 text-[11px] text-white">Bonjour 5225</div>
+                  </div>
+
+                  <div>
+                    <div class="text-[9px] font-mono text-gray-400 mb-1">Message à traiter :</div>
+                    <div class="w-full h-7 rounded bg-black/40 border border-gray-700/50 flex items-center px-2 text-[11px] text-white">SECRET</div>
+                  </div>
+
+                  <div class="w-full py-2 rounded text-center text-[10px] font-bold mt-2 cursor-pointer" style="background:rgba(34,211,238,0.8); color:black;">
+                    Lancer le traitement
+                  </div>
+
+                  <div class="mt-2 text-center border-t border-gray-800 pt-3">
+                    <div class="text-[9px] text-gray-500 mb-1">Résultat :</div>
+                    <div class="text-[13px] font-bold" style="color:var(--neon-pink); letter-spacing: 1px;">XMRTY§</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- Separator -->
